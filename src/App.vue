@@ -1,29 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld statoXHR="stato" msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <Projects/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Projects from "./components/Projects.vue";
+import Header from "./components/Header.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Header,
+    Projects
   }
-}
-
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.hero {
+  font-family: "Josefin Sans", sans-serif;
+}
+.nav {
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
 }
 </style>
