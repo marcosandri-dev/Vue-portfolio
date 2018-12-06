@@ -1,23 +1,19 @@
 <template>
   <div id="app">
-    <Header/>
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <Projects/>
-      </div>
+    <div class="container">
+      <Header/>
+      <router-view/>
     </div>
   </div>
 </template>
 
 <script>
-import Projects from "./components/Projects.vue";
 import Header from "./components/Header.vue";
 
 export default {
   name: "app",
   components: {
-    Header,
-    Projects
+    Header
   }
 };
 </script>

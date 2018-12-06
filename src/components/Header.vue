@@ -4,14 +4,24 @@
     <!-- <img class="img-responsive" alt="Vue logo" src="../assets/logo.png"> -->
     <span class="my-name" href="#">MARCO SANDRI</span>
     <li class="nav-item">
-      <a class="nav-link align-self-end" href="#">Data ></a>
+      <a v-on:click="page='data'" v-if="page === 'home'" class="nav-link align-self-end" href="#">
+        <router-link to="/data">Data ></router-link>
+      </a>
+      <a v-on:click="page='home'" v-else class="nav-link align-self-end" href="#">
+        <router-link to="/">- Projects</router-link>
+      </a>
     </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  data: function() {
+    return {
+      page: "home"
+    };
+  }
 };
 </script>
 
@@ -23,6 +33,6 @@ a {
 }
 ul {
   border-bottom: 1px solid black;
-  padding: 8px 20px;
+  padding: 8px 0px;
 }
 </style>
