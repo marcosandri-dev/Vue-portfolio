@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-md-6 col-lg-4 carta">
+  <div class="carta">
     <p>{{project.name}}</p>
     <img class="img-fluid" src="https://placeimg.com/401/300/any">
     <div class="row">
